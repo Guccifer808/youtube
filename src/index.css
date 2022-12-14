@@ -10,6 +10,7 @@ body{
     margin:0;
     background-color: #181818;
     color: #FFFFFF;
+    /* To Do: use oswald on navbar only */
     font-family: 'Oswald', sans-serif;
 }
 
