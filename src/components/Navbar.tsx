@@ -36,7 +36,17 @@ export default function Navbar() {
                     </button>
                 </div>
             </form>
-
+            <div className="p-3 bg-zinc-900 rounded-full text-xl">
+                <TiMicrophone/>
+            </div>
+        </div>
+        <div className="flex gap-5 items-center text-xl">
+            <BsCameraVideo/>
+            <IoAppsSharp/>
+            <div className="relative"><BsBell/>
+            <span className="absolute bottom-2 left-2 text-xs bg-red-600 rounded-full px-1">9+</span>
+            </div>
+            <img src="https://yt3.googleusercontent.com/ytc/AMLnZu80d66aj0mK3KEyMfpdGFyrVWdV5tfezE17IwRkhw=s88-c-k-c0x00ffffff-no-rj" alt="logo" className='w-9 h-9 rounded-full'/>
         </div>
     </div>
   )
