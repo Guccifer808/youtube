@@ -18,7 +18,7 @@ body{
     font-family: 'Oswald', sans-serif;
 }
 .sidebar {
-    overflow-y: hiddens;
+    overflow: hidden;
 }
 .sidebar:hover {
     overflow-y: scroll;

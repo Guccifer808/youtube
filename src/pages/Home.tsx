@@ -8,7 +8,7 @@ export default function Home() {
       <div style={{ height: 'auto', paddingBottom: '1px' }}>
         <Navbar />
       </div>
-      <div className="flex" style={{ height: '92.5vh' }}>
+      <div className="flex" style={{ height: '96.5vh' }}>
         <Sidebar />
       </div>
     </div>

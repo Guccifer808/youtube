@@ -1,7 +1,7 @@
 import { InitialState } from './../Types';
 import { configureStore, createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-//created state
+//created initial state, TSX type
 const initialState:InitialState = {
     videos: [],
     currentVideo: null,
@@ -11,6 +11,7 @@ const initialState:InitialState = {
     recommendedVideos: [],
 };
 
+// createSlice action via Redux Toolkit
 const youtubeSlice = createSlice({
     name: "youtubeApp",
     initialState,
