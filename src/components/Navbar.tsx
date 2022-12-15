@@ -9,7 +9,7 @@ import { IoAppsSharp } from 'react-icons/io5';
 
 export default function Navbar() {
   return (
-    <div className="flex justify-between items-center px-14 h-14 bg-[#030303] opacity-95 sticky top-0 z-50 navbar">
+    <div className="flex justify-between items-center px-6 h-14 bg-[#151515] opacity-95 sticky top-0 z-50 navbar">
       <div className="flex gap-8 items-center text-2xl">
         <div>
           <GiHamburgerMenu className="text-slate-300" />
@@ -23,7 +23,7 @@ export default function Navbar() {
       </div>
       <div className="flex items-center justify-center gap-5">
         <form action="">
-          <div className="flex bg-zinc-900 h-10 px-4 pr-0">
+          <div className="flex bg-zinc-900 h-10 px-4 pr-0 rounded-full">
             <div className="flex gap-4 items-center pr-5">
               <div>
                 <AiOutlineSearch className="text-xl" />
@@ -34,7 +34,7 @@ export default function Navbar() {
               />
               <AiOutlineClose className="text-xl cursor-pointer" />
             </div>
-            <button className="flex items-center justify-center bg-zinc-800 h-10 w-16">
+            <button className="flex items-center justify-center bg-zinc-800 h-10 w-16 rounded-r-full">
               <AiOutlineSearch className="text-xl" />
             </button>
           </div>

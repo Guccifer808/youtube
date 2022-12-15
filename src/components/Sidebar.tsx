@@ -120,14 +120,14 @@ export default function Sidebar() {
   ];
 
   return (
-    <div className="w-2/12 bg-[#212121] pr-5 overflow-auto pb-8 sidebar">
+    <div className="w-[14.5rem] bg-[#151515] pr-5 overflow-auto pb-8 sidebar">
       {/* Main links */}
       <ul className="flex flex-col border-b-2 border-gray-700">
         {mainLinks.map(({ icon, name }) => {
           return (
             <li
               key={name}
-              className={`pl-6 py-3 hover:bg-zinc-600 ${
+              className={`pl-6 py-3 rounded-full hover:bg-zinc-600 ${
                 name === 'Home' ? 'bg-slate-700' : ''
               }`}
             >
@@ -153,7 +153,7 @@ export default function Sidebar() {
         })}
       </ul>
       {/* Subscription links */}
-      <ul className="flex flex-col border-b-2 border-gray-700">
+      <ul className="flex flex-col border-b-2 border-gray-700 ">
         {subscriptionLinks.map(({ icon, name }) => {
           return (
             <li key={name} className="pl-6 py-3 hover:bg-zinc-600 ">
