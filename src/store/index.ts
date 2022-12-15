@@ -1,5 +1,6 @@
 import { InitialState } from './../Types';
 import { configureStore, createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { getHomepageVideos } from './reducers/getHomepageVideos';
 
 //created initial state, TSX type
 const initialState:InitialState = {
@@ -16,7 +17,12 @@ const youtubeSlice = createSlice({
     name: "youtubeApp",
     initialState,
     reducers:{},
-    extraReducers: (builder => {}),
+    extraReducers: (builder => {
+        builder.addCase(getHomepageVideos.fulfilled.(state, action) =>{
+            state.videos = action.payload.parsedData;
+            state.nextPageToken = action.payload.nextPageToken;
+        })
+    }),
 })
 
 export const store = configureStore({

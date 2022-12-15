@@ -1,5 +1,5 @@
 export interface InitialState {
-    videos: HomePageVideos[];
+    videos: HomepageVideos[];
     currentVideo: CurrentVideo | null;
     searchTerm: string;
     searchResults: [];
@@ -9,4 +9,17 @@ export interface InitialState {
 
 export interface RecommendedVideos {}
 export interface CurrentVideo {}
-export interface HomePageVideos {}
+export interface HomepageVideos {    
+    videoId: string;
+    videoThumbnail: string; //if err place it before Duration
+    videoTitle: string;
+    videoDescription: string;
+    videoLink: string;
+    videoDuration: string;
+    videoViews: string;
+    videoAge: string;
+    channelInfo: {
+        id: string;
+        image: string;
+        name: string;
+    }}
