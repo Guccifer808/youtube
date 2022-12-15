@@ -2,4 +2,4 @@
 
 ### YouTube inspired
 
-- React.js, Typescript, Tailwind CSS, Redux Toolkit, Axios.
+- React.js, Typescript, Tailwind CSS, Redux Toolkit, Axios, YouTube API v3.
