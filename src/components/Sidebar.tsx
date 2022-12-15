@@ -120,15 +120,15 @@ export default function Sidebar() {
   ];
 
   return (
-    <div className="w-[14.5rem] bg-[#151515] pr-5 overflow-auto pb-8 sidebar">
+    <div className="w-[14.5rem] bg-[#151515] pr-5 pb-8 sidebar">
       {/* Main links */}
       <ul className="flex flex-col border-b-2 border-gray-700">
         {mainLinks.map(({ icon, name }) => {
           return (
             <li
               key={name}
-              className={`pl-6 py-3 rounded-full hover:bg-zinc-600 ${
-                name === 'Home' ? 'bg-slate-700' : ''
+              className={`pl-6 py-3 rounded-lg hover:bg-zinc-800/90 ${
+                name === 'Home' ? 'bg-zinc-800/90' : ''
               }`}
             >
               <a href="#" className="flex items-center gap-5">
@@ -143,7 +143,7 @@ export default function Sidebar() {
       <ul className="flex flex-col border-b-2 border-gray-700">
         {secondaryLinks.map(({ icon, name }) => {
           return (
-            <li key={name} className="pl-6 py-3 hover:bg-zinc-600 ">
+            <li key={name} className="pl-6 py-3 hover:bg-zinc-800/90 ">
               <a href="#" className="flex items-center gap-5">
                 {icon}
                 <span className="text-sm tracking-wider">{name}</span>
@@ -156,7 +156,7 @@ export default function Sidebar() {
       <ul className="flex flex-col border-b-2 border-gray-700 ">
         {subscriptionLinks.map(({ icon, name }) => {
           return (
-            <li key={name} className="pl-6 py-3 hover:bg-zinc-600 ">
+            <li key={name} className="pl-6 py-3 hover:bg-zinc-800/90 ">
               <a href="#" className="flex items-center gap-5">
                 {icon}
                 <span className="text-sm tracking-wider">{name}</span>
@@ -169,7 +169,7 @@ export default function Sidebar() {
       <ul className="flex flex-col border-b-2 border-gray-700">
         {helpLinks.map(({ icon, name }) => {
           return (
-            <li key={name} className="pl-6 py-3 hover:bg-zinc-600 ">
+            <li key={name} className="pl-6 py-3 hover:bg-zinc-800/90 ">
               <a href="#" className="flex items-center gap-5">
                 {icon}
                 <span className="text-sm tracking-wider">{name}</span>
@@ -181,13 +181,21 @@ export default function Sidebar() {
       {/* Legal links */}
       <ul className="flex gap-2 flex-wrap text-[0.75rem] text-zinc-400 p-4">
         {textLinks[0].map((name) => {
-          return <li key={name}>{name}</li>;
+          return (
+            <li key={name} className="cursor-pointer">
+              {name}
+            </li>
+          );
         })}
       </ul>
       {/* Legal links 2 */}
       <ul className="flex gap-2 flex-wrap text-[0.75rem] text-zinc-400 p-4">
         {textLinks[1].map((name) => {
-          return <li key={name}>{name}</li>;
+          return (
+            <li key={name} className="cursor-pointer">
+              {name}
+            </li>
+          );
         })}
       </ul>
       <span className="px-4 text-sm text-zinc-400">&copy; 2022 Google LLC</span>
