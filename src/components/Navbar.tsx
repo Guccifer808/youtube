@@ -9,7 +9,7 @@ import { IoAppsSharp } from 'react-icons/io5';
 
 export default function Navbar() {
   return (
-    <div className="flex justify-between items-center px-14 h-14 bg-[#030303] opacity-95 sticky top-0 z-50">
+    <div className="flex justify-between items-center px-14 h-14 bg-[#030303] opacity-95 sticky top-0 z-50 navbar">
       <div className="flex gap-8 items-center text-2xl">
         <div>
           <GiHamburgerMenu className="text-slate-300" />

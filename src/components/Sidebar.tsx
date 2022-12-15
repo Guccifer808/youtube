@@ -119,5 +119,82 @@ export default function Sidebar() {
     ],
   ];
 
-  return <div>Sidebar</div>;
+  return (
+    <div className="w-2/12 bg-[#212121] pr-5 overflow-auto pb-8 sidebar">
+      {/* Main links */}
+      <ul className="flex flex-col border-b-2 border-gray-700">
+        {mainLinks.map(({ icon, name }) => {
+          return (
+            <li
+              key={name}
+              className={`pl-6 py-3 hover:bg-zinc-600 ${
+                name === 'Home' ? 'bg-slate-700' : ''
+              }`}
+            >
+              <a href="#" className="flex items-center gap-5">
+                {icon}
+                <span className="text-sm tracking-wider">{name}</span>
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+      {/* Secondary links */}
+      <ul className="flex flex-col border-b-2 border-gray-700">
+        {secondaryLinks.map(({ icon, name }) => {
+          return (
+            <li key={name} className="pl-6 py-3 hover:bg-zinc-600 ">
+              <a href="#" className="flex items-center gap-5">
+                {icon}
+                <span className="text-sm tracking-wider">{name}</span>
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+      {/* Subscription links */}
+      <ul className="flex flex-col border-b-2 border-gray-700">
+        {subscriptionLinks.map(({ icon, name }) => {
+          return (
+            <li key={name} className="pl-6 py-3 hover:bg-zinc-600 ">
+              <a href="#" className="flex items-center gap-5">
+                {icon}
+                <span className="text-sm tracking-wider">{name}</span>
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+      {/* Help links */}
+      <ul className="flex flex-col border-b-2 border-gray-700">
+        {helpLinks.map(({ icon, name }) => {
+          return (
+            <li key={name} className="pl-6 py-3 hover:bg-zinc-600 ">
+              <a href="#" className="flex items-center gap-5">
+                {icon}
+                <span className="text-sm tracking-wider">{name}</span>
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+      {/* Legal links */}
+      <ul className="flex gap-2 flex-wrap text-[0.75rem] text-zinc-400 p-4">
+        {textLinks[0].map((name) => {
+          return <li key={name}>{name}</li>;
+        })}
+      </ul>
+      {/* Legal links 2 */}
+      <ul className="flex gap-2 flex-wrap text-[0.75rem] text-zinc-400 p-4">
+        {textLinks[1].map((name) => {
+          return <li key={name}>{name}</li>;
+        })}
+      </ul>
+      <span className="px-4 text-sm text-zinc-400">&copy; 2022 Google LLC</span>
+      <br />
+      <p className="px-4 pt-3 text-sm text-red-600">
+        Made for educational purposes only.
+      </p>
+    </div>
+  );
 }
