@@ -1,6 +1,7 @@
 import { InitialState } from './../Types';
+import { configureStore, createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-
+//created state
 const initialState:InitialState = {
     videos: [],
     currentVideo: null,
