@@ -8,14 +8,14 @@ import { HomepageVideos } from '../../Types';
 const _APIkey = process.env.REACT_APP_YOUTUBE_DATA_API_KEY;
 
 //thunk will grab Search page videos
-export const getSearchPageVideos = createAsyncThunk("youtubeApp/searchPageVideos", async (isNext:boolean, { getState }) => {
+export const getSearchPageVideos = createAsyncThunk("youtubeApp/SearchPageVideos", async (isNext:boolean, { getState }) => {
     const {
         youtubeApp: { nextPageToken: nextPageTokenFromState, videos, searchTerm },
     } = getState() as RootState;
 
     const { data: {items, nextPageToken}} = 
         await axios.get(
-            `${YOUTUBE_API_URL}/search?q="${searchTerm}"&key=${_APIkey}&part=snippet&type=video&${
+            `${YOUTUBE_API_URL}/search?maxResults=16&q="${searchTerm}"&key=${_APIkey}&part=snippet&type=video&${
               isNext ? `pageToken=${nextPageTokenFromState}` : ""
             }`
           );
