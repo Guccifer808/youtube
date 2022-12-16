@@ -14,20 +14,20 @@ export default function Home() {
   const dispatch = useAppDispatch();
   const videos = useAppSelector((state) => state.youtubeApp.videos);
 
-  //clearVideos
+  // Clearing Videos
   useEffect(() => {
     return () => {
       dispatch(clearVideos());
     };
   }, [dispatch]);
-  // getHomepageVideos
+  // Homepage Videos
   useEffect(() => {
     dispatch(getHomepageVideos(false));
   }, [dispatch]);
 
   return (
     <div className="max-h-screen overflow-hidden">
-      <div style={{ height: 'auto', paddingBottom: '1px' }}>
+      <div style={{ height: 'auto' }}>
         <Navbar />
       </div>
       <div className="flex" style={{ height: '92.5vh' }}>
@@ -38,9 +38,9 @@ export default function Home() {
             next={() => dispatch(getHomepageVideos(true))}
             hasMore={videos.length < 100} //was 300
             loader={<Spinner />}
-            height={650}
+            height={'100%'}
           >
-            <div className="grid gap-y-14 gap-x-8 grid-cols-4 p-8 ">
+            <div className="flex gap-y-24 gap-x-20 flex-wrap py-8 max-w-[1700px]">
               {/* could use for mob <div className="flex gap-y-14 gap-x-8 flex-col p-8"> */}
               {/* or <div className="grid gap-y-14 gap-x-8 grid-cols-1 p-8"> */}
               {videos.map((item: HomepageVideos) => {
