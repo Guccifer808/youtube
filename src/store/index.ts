@@ -2,6 +2,8 @@ import { InitialState } from './../Types';
 import { configureStore, createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { getHomepageVideos } from './reducers/getHomepageVideos';
 import { getSearchPageVideos } from './reducers/getSearchPageVideos';
+import { getVideoDetails } from './reducers/getVideoDetails';
+import { getRecommendedVideos } from './reducers/getRecommendedVideos';
 
 //created initial state, TSX type
 const initialState:InitialState = {
@@ -37,6 +39,12 @@ const youtubeSlice = createSlice({
         builder.addCase(getSearchPageVideos.fulfilled, (state, action) =>{
             state.videos = action.payload.parsedData;
             state.nextPageToken = action.payload.nextPageToken;
+        });
+        builder.addCase(getVideoDetails.fulfilled, (state, action) =>{
+            state.currentVideo = action.payload;
+        });
+        builder.addCase(getRecommendedVideos.fulfilled, (state, action) =>{
+            state.recommendedVideos = action.payload.parsedData;
         });
     }),
 })

@@ -46,7 +46,7 @@ export default function Search() {
               {videos.map((item: HomepageVideos) => {
                 return (
                   <div className="my-5">
-                    <SearchCard data={item} key={item.videoId} />;
+                    <SearchCard data={item} key={item.videoId} />
                   </div>
                 );
               })}
